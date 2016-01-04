@@ -2,7 +2,7 @@
 /** Modified by FSGM-Howard@IXLAB START **/
 define('DATA_ACCESS','yes');
 require "./adminauth.php";
-if (!$auth && $_GET['server']==DB_HOST) { die("Token invaild or expired!"); }
+if (defined('TIEBASIGNER_INSTALLED') && !$auth && $_GET['server']==DB_HOST) { die("Token invaild or expired!"); }
 /** Modified by FSGM-Howard@IXLAB END **/
 
 /** Adminer - Compact database management
